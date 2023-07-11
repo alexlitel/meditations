@@ -1,0 +1,47 @@
+html {
+    min-height: 100%;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    transition: 2s opacity ease-in !important;
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+#gen_body {
+    height: 100%;
+    min-height: 100%;
+    width: 100%;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    transition: 2s opacity ease-in !important;
+}
+
+#gen_child {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: 2s opacity ease-in !important;
+    opacity: 0;
+}
+
+.fade-in-anim {
+    animation: 2s fade-in both alternate infinite;
+}
+
+
+@keyframes fade-in {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(2);
+    }
+}
