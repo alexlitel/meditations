@@ -58,21 +58,19 @@ function generateBackground() {
     return [str, num];
 }
 
-let body;
-let child;
+function getBodyAndChildElements() {
+    return ['body', 'child'].map(id => document.getElementById(`gen_${id}`))
+}
 
 function createInitialColors() {
-    body = document.getElementById("gen_body");
-    child = document.getElementById("gen_child");
+    const [body] = getBodyAndChildElements();
 
     const [bg] = generateBackground();
     body.style.background = bg;
 }
 
-
-
-
 function updateColors() {
+    const [body, child] = getBodyAndChildElements();
     const isVisible = +child.style.opacity === 1;
     const [bg] = generateBackground();
 
